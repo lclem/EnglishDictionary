@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId "com.example.EnglishDictionary"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -54,7 +54,7 @@ dependencies {
     implementation files('libs/gdata-health-meta-2.0.jar')
     implementation files('libs/gdata-maps-2.0.jar')
     implementation files('libs/gdata-maps-meta-2.0.jar')
-    implementation files('libs/gdata-media-1.0.jar')
+    // implementation files('libs/gdata-media-1.0.jar')
     implementation files('libs/gdata-photos-2.0.jar')
     implementation files('libs/gdata-photos-meta-2.0.jar')
     implementation files('libs/gdata-projecthosting-2.1.jar')
@@ -70,5 +70,5 @@ dependencies {
     implementation files('libs/gdata-youtube-2.0.jar')
     implementation files('libs/gdata-youtube-meta-2.0.jar')
     // implementation files('libs/jsr305.jar')
-    implementation files('libs/mail.jar')
+    // implementation files('libs/mail.jar')
 }
