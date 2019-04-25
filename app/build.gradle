@@ -11,8 +11,11 @@ android {
 
     defaultConfig {
         applicationId "com.example.EnglishDictionary"
-        minSdkVersion 14
+        minSdkVersion 18
         targetSdkVersion 28
+        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -21,56 +24,32 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    testOptions {
+        animationsDisabled true
+    }
+
+    useLibrary 'android.test.runner'
+    useLibrary 'android.test.base'
+    useLibrary 'android.test.mock'
+
 }
+
+// apply plugin: 'org.junit.platform.gradle.plugin'
+apply plugin: 'com.android.application'
 
 dependencies {
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.google.guava:guava:27.1-jre'
-    /*
-    implementation files('libs/gdata-analytics-2.1.jar')
-    implementation files('libs/gdata-analytics-meta-2.1.jar')
-    implementation files('libs/gdata-appsforyourdomain-1.0.jar')
-    implementation files('libs/gdata-appsforyourdomain-meta-1.0.jar')
-    implementation files('libs/gdata-base-1.0.jar')
-    implementation files('libs/gdata-blogger-2.0.jar')
-    implementation files('libs/gdata-blogger-meta-2.0.jar')
-    implementation files('libs/gdata-books-1.0.jar')
-    implementation files('libs/gdata-books-meta-1.0.jar')
-    implementation files('libs/gdata-calendar-2.0.jar')
-    implementation files('libs/gdata-calendar-meta-2.0.jar')
-    implementation files('libs/gdata-client-1.0.jar')
-    implementation files('libs/gdata-client-meta-1.0.jar')
-    implementation files('libs/gdata-codesearch-2.0.jar')
-    implementation files('libs/gdata-codesearch-meta-2.0.jar')
-    implementation files('libs/gdata-contacts-3.0.jar')
-    implementation files('libs/gdata-contacts-meta-3.0.jar')
-    implementation files('libs/gdata-core-1.0.jar')
-    implementation files('libs/gdata-docs-3.0.jar')
-    implementation files('libs/gdata-docs-meta-3.0.jar')
-    implementation files('libs/gdata-finance-2.0.jar')
-    implementation files('libs/gdata-finance-meta-2.0.jar')
-    implementation files('libs/gdata-gtt-2.0.jar')
-    implementation files('libs/gdata-gtt-meta-2.0.jar')
-    implementation files('libs/gdata-health-2.0.jar')
-    implementation files('libs/gdata-health-meta-2.0.jar')
-    implementation files('libs/gdata-maps-2.0.jar')
-    implementation files('libs/gdata-maps-meta-2.0.jar')
-    // implementation files('libs/gdata-media-1.0.jar')
-    implementation files('libs/gdata-photos-2.0.jar')
-    implementation files('libs/gdata-photos-meta-2.0.jar')
-    implementation files('libs/gdata-projecthosting-2.1.jar')
-    implementation files('libs/gdata-projecthosting-meta-2.1.jar')
-    implementation files('libs/gdata-sidewiki-2.0.jar')
-    implementation files('libs/gdata-sidewiki-meta-2.0.jar')
-    implementation files('libs/gdata-sites-2.0.jar')
-    implementation files('libs/gdata-sites-meta-2.0.jar')
-    implementation files('libs/gdata-spreadsheet-3.0.jar')
-    implementation files('libs/gdata-spreadsheet-meta-3.0.jar')
-    implementation files('libs/gdata-webmastertools-2.0.jar')
-    implementation files('libs/gdata-webmastertools-meta-2.0.jar')
-    implementation files('libs/gdata-youtube-2.0.jar')
-    implementation files('libs/gdata-youtube-meta-2.0.jar')
-    // implementation files('libs/jsr305.jar')
-    // implementation files('libs/mail.jar')
-    */
+    //androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    // Optional -- Hamcrest library
+    androidTestImplementation 'org.hamcrest:hamcrest-library:1.3'
+    // Optional -- UI testing with Espresso
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    // Optional -- UI testing with UI Automator
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test:core:1.1.0'
 }
