@@ -1,2 +1,2 @@
 # EnglishDictionary
-A simple interface to access a popular English dictionary
+A simple Android app for offline access of a popular English dictionary
