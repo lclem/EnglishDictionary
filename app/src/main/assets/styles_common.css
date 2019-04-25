@@ -1,0 +1,691 @@
+dictionary {
+	font-size: 16;
+	padding: 3px;
+	min-height: 460px;
+}
+
+e {
+	display: block;
+	border-top: solid thin;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	padding-bottom: 8px;
+	border-bottom: solid thin;
+	border-color: #C0C0C0;
+}
+
+h {
+	margin-top: 14px;
+	}
+
+	h > hw {
+		font-size: 24px;
+		color: green;
+		}
+
+sy {
+}
+
+trans {
+	font-weight: bold;
+	}
+	trans:before {
+		content: '\2018';
+		}
+	trans:after {
+		content: '\2019';
+		}
+
+Name {
+	font-style: italic;
+}
+
+altName {
+	font-weight: bold;
+}
+
+b {
+	font-weight: bold;
+}
+
+i {
+	font-style: italic;
+}
+
+u {
+	text-decoration: underline;
+}
+
+bi {
+	font-weight: bold;
+	font-style: italic;
+}
+
+subjLabel {
+	font-family: arial;
+	font-size: 14px;
+	}
+
+subse {
+}
+
+r {
+	font-style: normal;
+	font-weight: normal;
+}
+
+rl {
+	font-family: sans-serif;
+	font-size: 14px;
+	letter-spacing: -1px;
+	}
+	rl:before {
+		content: " ";
+	}
+
+provLabel {
+	font-family: arial;
+	font-size: 14px;
+	}
+	provLabel:before {
+		content: " ";
+	}
+	
+varGrp > provLabel:first-child:before {
+	content: "";
+}
+
+xref {
+	}
+	xref > x {
+		font-variant: small-caps;
+		font-weight: bold;
+		}	
+
+
+xrefGrp {
+	}
+
+sn {
+}
+
+MS {
+	display: list-item;
+	list-style: disc inside;
+	padding-left: 20px;
+}
+
+d {
+}
+
+Name {
+	font-style: italic;
+}
+
+sc {
+	font-variant: small-caps;
+}
+
+lp {
+	}
+	lp[highlight="true"] {
+			font-weight: bold;
+	}
+
+gramGrp {
+	}
+	gramGrp:before {
+		content: '[';
+		}
+	gramGrp:after {
+		content: ']';
+		}
+
+gramInfo {
+	}
+	gramInfo:before {
+		content: '[';
+		}
+	gramInfo:after {
+		content: ']';
+		}
+
+quote {	
+	}
+	quote:before {
+		content: " '";
+		}
+	quote:after {
+		content: "'";
+		}
+
+varGrp {
+	}
+
+	varGrp:before {
+		content: ' (';
+		}
+
+	varGrp > v {
+		font-weight: bold;
+		}
+
+	varGrp:after {
+		content: ') ';
+		}
+
+formGrp {
+	}
+	
+	formGrp:before {
+		content: '(';
+	}
+	
+	formGrp > f {
+		font-weight: bold;
+	}
+	
+	formGrp:after {
+		content: ')';
+	}
+
+form {
+	display: inline;
+}
+
+lhw {
+	display: block;
+	font-weight: bold;
+}
+
+lh {
+	padding-top: 4px;
+	display: block;
+}
+
+ex {
+	font-style: italic;
+		}
+	ex > exb {
+		}
+
+exGrp {
+}
+
+et {
+}
+	et:before {
+		content: "[";
+	}
+	et:after {
+		content: "]";
+	}
+
+etBlock {
+}
+
+eb {
+	background-color: #FDFEB5;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	display: block;
+	padding: 0.5em;
+	}
+	eb:before {
+		content: "ORIGIN ";
+		font-variant: small-caps;
+		}
+	eb > date {
+		background-color: #FDFEB5;
+	}
+	
+encBlock {
+	display: block;
+	position: relative;
+	padding: 3px 6px 3px 18px;
+	text-indent: 0px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+in {
+	font-size: 75%;
+	position: relative;
+	top: 0.4em;
+}
+
+ini {
+	font-size: 75%;
+	position: relative;
+	top: 0.4em;
+	font-style: italic;
+}
+			
+lang {
+}
+
+ff {
+	font-weight: bold;
+	font-style: italic;
+}
+
+fhw {
+	font-weight: bold;
+	font-style: italic;
+}
+
+finf {
+	font-weight: bold;
+	font-style: italic;
+}
+
+fl {
+	font-weight: bold;
+}
+
+us {
+	}
+	us > par:first-child {
+		text-indent: 0px;
+	}
+	us > par:first-child:before {
+		content: 'USAGE ';
+		font-variant: small-caps;
+	}
+
+xu {
+	font-weight: bold;
+}
+
+pg {
+}
+
+pr {
+	font-size: 20px;
+	color: #606060
+	}
+	pr:before {
+		font-size: 130%;
+		position: relative;
+		top: .15em;
+		content: " |";
+	}
+	pr:after {
+		font-size: 130%;
+		position: relative;
+		top: .15em;
+		content: "| ";
+	}
+	
+date {
+}
+
+techGrp {
+
+}
+	techGrp:before {
+		content: ' \2022 ';
+	}
+	
+
+techMS {
+	display: list-item;
+	list-style: disc inside;
+	padding-left: 20px;
+}
+
+txn {
+}
+
+txn[highlight="true"] {
+   font-style: italic;
+}
+
+txnBin {
+	font-style: italic;
+}
+
+txnFam {
+}
+
+txnGenus {
+	font-style: italic;
+}
+
+
+hm {
+	position: relative;
+	top: -5px;
+	font-size: 10px;
+}
+
+l {
+	font-weight: bold;
+}
+
+ps {
+	font-style: italic;
+}
+		
+sb {
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 8px;
+	counter-reset: se;
+	}
+
+
+pl {
+	display: block;
+	margin-bottom: 4px;
+	}
+		
+se {
+	font-size: 17px;
+	display: list-item;
+	list-style: decimal inside;
+	padding-left: 16px;
+	text-indent: -16px;
+	}
+	
+	se:before {
+		counter-increment: se;
+	}
+	
+	pl + se:last-child {
+		display: block;
+		padding-left: 0px;
+		text-indent: 0px;
+	}
+
+infGrp {
+	}
+	infGrp:before {
+		content: '(';
+		}
+	infGrp > inf {
+		font-weight: bold;
+		}
+	infGrp:after {
+		content: ')';
+		}
+		
+specUse {
+	display: block;
+}
+
+phrBlock {
+	display: block;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	}
+	
+	phrBlock:before {
+		content: 'PHRASES';
+		}
+		
+sub {
+	position: relative;
+	font-size: 16px;
+	display: block;
+	}
+	
+	sub > l {
+		font-weight: bold;
+		}
+
+su {
+	font-size: 70%;
+	position: relative;
+	top: -0.5em;
+}
+
+sui {
+	font-size: 70%;
+	position: relative;
+	top: -0.5em;
+	font-style: italic;
+}
+
+drvBlock {
+	display: block;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	}
+	drvBlock:before {
+		content: 'DERIVATIVES';
+		display: block;
+		}
+
+ht {
+	}
+	ht:before {
+		content: '\2018';
+		}
+	ht:after {
+		content: '\2019';
+		}
+	
+cite {
+	font-weight:bold;
+	}
+
+com {
+}
+
+div[class="copyright"] {
+	font-size: xx-small;
+	text-align: center;
+}
+
+/* render as (italic|bold|bolditalic|smallcaps|roman|superior|inferior|sans-serif) */
+render[as="italic"] {
+	font-style: italic;
+}
+
+render[as="bold"] {
+	font-weight: bold;
+}
+
+render[as="bolditalic"] {
+	font-weight: bold;
+	font-style: italic;
+}
+
+render[as="smallcaps"] {
+	font-variant: small-caps;
+}
+
+render[as="roman"] {
+}
+
+render[as="superior"] {
+	font-size: 70%;
+	position: relative;
+	top: -0.5em;
+}
+
+render[as="inferior"] {
+	font-size: 75%;
+	position: relative;
+	top: 0.4em;
+}
+
+render[as="sans-serif"] {
+	font-family: arial;
+}
+
+
+/* Fraction */
+fr {
+}
+
+/* Numerator */
+nu {
+	font-size: 70%;
+	position: relative;
+	top: -0.5em;
+}
+
+/* Denominator */
+dn {
+	font-size: 70%;
+	position: relative;
+	top: 0.0em;
+}
+
+/* Slash between numerator and denominator */
+fr > nu:after {
+	content: "/";
+}
+
+item {
+	display: block;
+}
+
+pvBlock {
+}
+	pvBlock:before {
+	content: 'PHRASAL VERBS';
+	}
+
+/* <!ATTLIST sf	type 
+	(awkward_synonyms | confusables | word_banks | word_continuums | word_notes | u_notes | list_words) #REQUIRED  */
+
+head {
+	font-weight: bold;
+}
+
+sf {
+	color: #404040;
+	background-color: #D6FFD7;
+	padding: 0.5em;
+	display: block;
+	}
+
+	sf body {
+		background-color: #D6FFD7;
+	}
+
+	sf head {
+		display: block;
+		margin-left: 18px;
+		font-weight: bold;
+		padding-top: 6px;	
+	}
+
+	sf[type="awkward_synonyms"]:before {
+		content: "THE RIGHT WORD";
+		font-weight: bold;
+		font-family: arial;
+		padding-left: 18px;
+	}
+	sf:before {
+		content: "THE RIGHT WORD ";
+		font-style: italic;
+		font-weight: bold;
+		font-family: arial;
+	}
+	sf[type="confusables"]:before {
+		content: "EASILY CONFUSED ";
+		display: block;
+		font-weight: bold;
+		font-family: arial;
+		padding-left: 18px;
+	}
+	sf[type="word_banks"]:before {
+		content: "WORD BANK ";
+		display: block;
+		font-weight: bold;
+		font-family: arial;
+		padding-left: 18px;
+	}
+	sf[type="word_notes"]:before {
+		content: "WORD NOTE";
+		display: block;
+		font-weight: bold;
+		font-family: arial;
+		padding-left: 18px;
+	}
+	sf[type="u_notes"]:before {
+		content: "USAGE NOTES";
+		display: block;
+		font-weight: bold;
+		font-family: arial;
+		padding-left: 18px;
+	}
+	sf[type="list_words"]:before {
+		content: "WORD LIST";
+		display: block;
+		font-weight: bold;
+		font-family: arial;
+		padding-left: 18px;
+	}
+	sf[type="word_continuums"]:before {
+		content: "WORD SPECTRUM ";
+		display: block;
+		font-weight: bold;
+		font-family: arial;
+		padding-left: 18px;
+	}
+	sf[type="word_continuums"] head {
+		margin-left: 0px;
+	}
+	sf[type="word_continuums"] body {
+		text-align: center;
+	}
+	sf[type="word_continuums"] item render[as="bold"] {
+		width: 100%;
+		border-top: solid 1px #404040;
+		border-bottom: solid 1px #404040;
+	}
+	
+img[src="doubleflat.png"] {
+	background: url("doubleflat.png") no-repeat;
+	content: "[doubleflat]";
+	padding-right: 6px;
+	height: 20px;
+}
+
+img[src="doublesharp.png"] {
+	background: url("doublesharp.png") no-repeat;
+	content: "[doublesharp]";
+	padding-right: 7px;
+	height: 20px;
+}
+
+img[src="fermata.png"] {
+	background: url("fermata.png") no-repeat;
+	background-size: 50%;
+	content: "[fermata]";
+	padding-right: 11px;
+	height: 20px;
+}
+
+img[src="SoundButton.png"] {
+	padding-left: 3px;
+	padding-right: 6px;
+	vertical-align: middle;
+	line-height: 36px;
+}
+
+a.audio_link {
+	font-size: 20px;
+}
+
+a img {
+	border: none;
+}
+
+
+p {
+	display: block;
+	padding-top: 4px;
+	text-indent: 8px;
+}
+
+par {
+	display: block;
+	padding-top: 4px;
+	text-indent: 8px;
+}

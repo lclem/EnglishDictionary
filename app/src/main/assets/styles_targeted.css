@@ -1,0 +1,87 @@
+drvBlock {
+	}
+	drvBlock sub {
+		display:inline;
+		font-size: 17px;
+		}
+	drvBlock sub ps:last-child:after{
+		content:', ';
+		}
+	drvBlock sub:last-child ps:last-child:after{
+		content:'';
+		}
+	drvBlock sub ps {
+		font-style: normal;
+		}
+	drvBlock sub ex {
+		font-style: italic;
+		}
+
+xref > x {
+	font-weight: bold;
+}	
+
+eb ff {
+	font-weight: normal;
+}
+eb trans {
+	font-weight: normal;
+}
+
+et:before {
+   content: "[ORIGIN ";
+}
+
+techGrp {
+	display:block;
+	font-size:75%;
+}
+
+sb se:first-child{
+	display: block;
+	padding-left: 0px;
+	text-indent: 0px;
+}
+ 
+pg {
+	font-size: 130%;
+}
+	
+pg:before {
+	content: "/";
+}
+
+pg:after {
+	content: "/";
+}
+
+pr {
+	font-size: 20px;
+	color: #606060
+	}
+	pr:before {
+		content: ''
+		}
+	pr:after {
+		content: ''
+		}
+
+us {
+	background-color: #EEE;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	display: block;
+	padding: 0.5em;
+}
+
+sb se gramGrp{
+	font-size:75%;
+}
+	
+varGrp{
+	font-weight: normal;
+}
+
+pvBlock:before {
+	content: '';
+}

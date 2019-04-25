@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">English Dictionary</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_dictionary">DictionaryActivity</string>
+    <string name="no_notes">no entries available</string>
+    <string name="authority">com.example.EnglishDictionary</string>
+    <string name="title_activity_dictionary_detail">DicitonaryDetailActivity</string>
+	<string name="action_reload_dictionary">Reload dictionary</string>
+</resources>

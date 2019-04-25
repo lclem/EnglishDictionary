@@ -1,0 +1,407 @@
+/*
+* {
+	background-color: yellow;
+}
+
+UNKNOWN_ENTITY {
+	background-color: red;
+}
+*/
+
+decoration.bar_below {
+	text-decoration: underline;
+}
+
+renamed_tr {
+	font-weight: bold;
+	font-style: italic;
+	}
+	renamed_tr:before {
+		content: '`'
+	}
+	renamed_tr:after {
+		content: '\''
+	}
+
+n {
+	font-style: italic;
+}
+
+body {
+	font-size: 16;
+	background-color: white;
+}
+
+dictionary_xml {
+}
+
+i {
+}
+
+ex {
+	font-style: italic;
+	}
+	ex > exb {
+	}
+
+sj {
+	font-family: arial;
+	font-size: 14px;
+	}
+
+r {
+}
+
+reg {
+	font-family: arial;
+	font-size: 14px;
+}
+
+ge {
+	font-family: arial;
+	font-size: 14px;
+}
+
+xr {
+	}
+	xr > xl {
+		font-variant: small-caps;
+	}
+	xr > x {
+		font-variant: small-caps;
+		font-weight: bold;
+	}	
+
+
+xg {
+	}
+
+xs {
+}
+
+ms {
+	display: list-item;
+	list-style: disc inside;
+	padding-left: 20px;
+}
+
+df {
+}
+
+ip {
+	font-style: italic;
+}
+
+sc {
+	font-variant: small-caps;
+}
+
+pp {
+}
+
+gg {
+	}
+	gg:before {
+		content: '[';
+	}
+	gg > sy {
+	}
+	gg:after {
+		content: ']';
+	}
+
+q {	
+	}
+	q:before {
+		content: ' [';
+	}
+	q:after {
+		content: ']';
+	}
+
+vg {
+	}
+
+	vg:before {
+		content: '('
+	}
+
+	vg > v {
+		font-weight: bold;
+	}
+
+	vg:after {
+		content: ')'
+	}
+
+broken_cms {
+}
+
+eg {
+}
+
+etym {
+	background-color: #FDFEB5;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	display: block;
+	padding: 5px;
+	}
+	etym:before {
+		content: "ORIGIN ";
+		font-variant: small-caps;
+	}
+	etym > d {
+		background-color: #FDFEB5;
+	}
+enc {
+	display: block;
+	position: relative;
+	left: 18px;
+	padding: 6px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+in {
+	font-size: 75%;
+	position: relative;
+	top: 0.4em;
+}
+			
+et {
+}
+
+la {
+}
+
+ff {
+	font-weight: bold;
+	font-style: italic;
+}
+
+fg {
+	}
+	fg:before {
+		content: '(';
+	}
+	fg:after {
+		content: ')';
+	}
+	fg > f {
+		font-weight: bold;
+	}
+
+un {
+}
+
+b {
+}
+
+xu {
+	font-weight: bold;
+}
+
+ee {
+}
+
+cn {
+	display: none;
+}
+
+pr {
+}
+
+ph {
+	color: gray;
+}
+
+d {
+}
+
+tec {
+}
+
+txb {
+	font-style: italic;
+}
+
+tx {
+}
+
+txf {
+}
+
+txg {
+}
+
+hg {
+	margin-top: 14px;
+	}
+
+	hg > hw {
+		font-size: 24px;
+		color: green;
+	}
+
+hm {
+	position: relative;
+	top: -5px;
+	font-size: 10px;
+}
+
+ll {
+	font-weight: bold;
+}
+
+se {
+	display: block;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	}
+
+
+	se > s1 {
+		display: block;
+		margin-bottom: 16px;
+		}
+		
+		ps {
+			font-style: italic;
+		}
+
+		se > s1 > infg:before {
+			content: '(';
+		}
+		se > s1 > infg {
+			}
+			se > s1 > infg > sy {
+			}
+			se > s1 > infg > inf {
+				font-weight: bold;
+			}
+			
+		se > s1 > infg:after {
+			content: ')';
+		}
+		
+		se > s1 > s2 {
+			font-size: 17px;
+			}
+			
+			se > s1 > s2[num] broken_cms {
+			}
+
+			se > s1 > s2[num] broken_cms:before {
+				font-weight: bold;
+			}				
+			se > s1 > s2[num="1"] broken_cms:before {
+				content: '1 ';
+			}
+			se > s1 > s2[num="2"] broken_cms:before {
+				content: '2 ';
+			}
+			se > s1 > s2[num="3"] broken_cms:before {
+				content: '3 ';
+			}
+			se > s1 > s2[num="4"] broken_cms:before {
+				content: '4 ';
+			}
+			se > s1 > s2[num="5"] broken_cms:before {
+				content: '5 ';
+			}
+			se > s1 > s2[num="6"] broken_cms:before {
+				content: '6 ';
+			}
+			se > s1 > s2[num="7"] broken_cms:before {
+				content: '7 ';
+			}
+			se > s1 > s2[num="8"] broken_cms:before {
+				content: '8 ';
+			}
+			se > s1 > s2[num="9"] broken_cms:before {
+				content: '9 ';
+			}
+			se > s1 > s2[num="10"] broken_cms:before {
+				content: '10 ';
+			}
+			se > s1 > s2[num="11"] broken_cms:before {
+				content: '11 ';
+			}
+			se > s1 > s2[num="12"] broken_cms:before {
+				content: '12 ';
+			}
+			se > s1 > s2[num="13"] broken_cms:before {
+				content: '13 ';
+			}
+			se > s1 > s2[num="14"] broken_cms:before {
+				content: '14 ';
+			}
+			se > s1 > s2[num="15"] broken_cms:before {
+				content: '15 ';
+			}
+			se > s1 > s2[num="16"] broken_cms:before {
+				content: '16 ';
+			}
+			se > s1 > s2[num="17"] broken_cms:before {
+				content: '17 ';
+			}
+			se > s1 > s2[num="18"] broken_cms:before {
+				content: '18 ';
+			}
+			se > s1 > s2[num="19"] broken_cms:before {
+				content: '19 ';
+			}
+
+sp {
+	display: block;
+	background-color: #D6FFD7;
+}
+
+phr {
+	display: block;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	}
+	
+	phr:before {
+		content: 'PHRASES';
+	}
+		
+sub {
+	position: relative;
+	font-size: 16px;
+	display: block;
+	}
+	
+	sub > l {
+		font-weight: bold;
+	}
+
+su {
+	font-size: 70%;
+	position: relative;
+	top: -0.5em;
+}
+
+drv {
+	display: block;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	}
+	drv:before {
+		content: 'DERIVATIVES';
+		display: block;
+	}
+
+htr {
+	}
+	htr:before {
+		content: '`';
+	}
+	htr:after {
+		content: '\'';
+	}
+	
+wi {
+}
