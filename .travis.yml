@@ -33,7 +33,7 @@ before_install:
   - yes | sdkmanager --update
   - yes | sdkmanager --licenses
   # Setup emulator
-  - echo "no" | avdmanager create avd -n test -k "system-images;android-28;default;armeabi-v7a" -c 200M -f # &>/dev/null
+  - echo "no" | avdmanager create avd -n test -k "system-images;android-28;default;armeabi-v7a" -c 200M -f & # &>/dev/null
   - $ANDROID_HOME/emulator/emulator -avd test -no-audio -no-window & # &>/dev/null
 
 
