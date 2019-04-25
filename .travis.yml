@@ -45,7 +45,8 @@ before_install:
 before_script:
 #  - echo no | android create avd --force -n test android-28 --abi armeabi-v7a
 #  - emulator -avd test -no-skin -no-audio -no-window
-  - echo no | avdmanager create avd -n test -k "system-images;android-28;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
+#  - echo no | avdmanager create avd -n test -k "system-images;android-28;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
+  - echo no | avdmanager create avd -n test -k "system-images;android-28;default;x86" -c 200M -f # & # &>/dev/null
   - $ANDROID_HOME/emulator/emulator -avd test -no-audio -no-window # & # &>/dev/null
   - adb shell settings put global window_animation_scale 0.0
   - adb shell settings put global transition_animation_scale 0.0
