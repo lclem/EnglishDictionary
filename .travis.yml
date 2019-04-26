@@ -26,7 +26,7 @@ android:
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
     # not supported yet
-    #- sys-img-x86-android-28
+    - sys-img-x86-android-28
     - sys-img-armeabi-v7a-android-17
     - sys-img-armeabi-v7a-android-18
     - sys-img-armeabi-v7a-android-19
@@ -62,8 +62,10 @@ before_script:
 #  - echo no | android create avd --force -n test android-28 --abi armeabi-v7a
 #  - emulator -avd test -no-skin -no-audio -no-window
 #  - echo no | avdmanager create avd -n test -k "system-images;android-28;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
-  - echo no | avdmanager create avd -n test -k "system-images;android-28;default" -c 200M -f # & # &>/dev/null
+  - echo no | avdmanager create avd -n test -k "system-images;android-22;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
   - $ANDROID_HOME/emulator/emulator -avd test -no-audio -no-window # & # &>/dev/null
+  #- echo no | avdmanager create avd --force -n test "system-images;android-28;default;x86"
+  #- emulator -avd test -memory 1500 -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage
   - adb shell settings put global window_animation_scale 0.0
   - adb shell settings put global transition_animation_scale 0.0
   - adb shell settings put global animator_duration_scale 0.0
