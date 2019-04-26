@@ -38,7 +38,7 @@ android:
     
 before_install:
   - yes | sdkmanager "platforms;android-28"
-  - pip install --upgrade pip
+  #- pip install --upgrade pip
   - pip install --user codecov    #Install codecov
   - chmod +x gradlew
   - chmod +x set_animation_permissions.sh
@@ -63,8 +63,8 @@ before_script:
   - export GRADLE_USER_HOME=$(pwd)/.gradle
   - export PATH=$PATH:$ANDROID_HOME/emulator/
   - export CODECOV_TOKEN="888b5841-0ebd-4b7f-b90a-fefa2cac34b2"
-  #- echo no | avdmanager create avd --force -n test0 -k "system-images;android-28;default;x86"
-  #- $ANDROID_HOME/emulator/emulator -avd test0 -memory 1500 -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage &
+  - echo no | avdmanager create avd --force -n test0 -k "system-images;android-28;default;x86"
+  - $ANDROID_HOME/emulator/emulator -avd test0 -memory 1500 -no-audio -no-window -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage &
   #- echo no | avdmanager create avd -n test1 -k "system-images;android-17;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
   #- echo no | avdmanager create avd -n test2 -k "system-images;android-18;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
   #- echo no | avdmanager create avd -n test3 -k "system-images;android-19;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
@@ -83,8 +83,7 @@ before_script:
   - adb shell settings put global animator_duration_scale 0.0
 
 script:
-  - ./gradlew jacocoTestReport
-  - ./gradlew build assembleAndroidTest
+  - ./gradlew build jacocoTestReport assembleAndroidTest
   - adb devices
   - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
   - adb shell input keyevent 82 &
