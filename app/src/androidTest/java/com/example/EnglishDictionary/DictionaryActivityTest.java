@@ -57,7 +57,7 @@ public class DictionaryActivityTest {
 
     @Test
     public void test2() throws Exception {
-        Espresso.onView(withId(R.id.edit_search)).perform(replaceText("ciao"), closeSoftKeyboard());
+        //Espresso.onView(withId(R.id.edit_search)).perform(replaceText("ciao"), closeSoftKeyboard());
         //Thread.sleep(1000);
         //onView(withId(R.id.text_word)).check(matches(withText(containsString("ciao"))));
         //DataInteraction item = Espresso.onData(anything()).inAdapterView(withId(R.id.dictionary_entry_list)).atPosition(0);
