@@ -14,8 +14,8 @@ android {
         minSdkVersion 18
         targetSdkVersion 28
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.EnglishDictionary.TestRunner"
     }
 
     buildTypes {
@@ -48,6 +48,26 @@ test {
     }
 }
 */
+
+// Grant animation permissions to avoid test failure because of ui sync.
+task grantAnimationPermissions(type: Exec, dependsOn: 'installMock') {
+    group = 'test'
+    description = 'Grant permissions for testing.'
+
+    def absolutePath = file('..') // Get project absolute path
+    commandLine "$absolutePath/set_animation_permissions.sh org.bookdash.android".split(" ")
+}
+
+// Source: http://stackoverflow.com/q/29908110/112705
+afterEvaluate {
+    // When launching individual tests from Android Studio, it seems that only the assemble tasks
+    // get called directly, not the install* versions
+    tasks.each { task ->
+        if (task.name.startsWith('assembleMockAndroidTest')) {
+            task.dependsOn grantAnimationPermissions
+        }
+    }
+}
 
 // apply plugin: 'org.junit.platform.gradle.plugin'
 apply plugin: 'com.android.application'

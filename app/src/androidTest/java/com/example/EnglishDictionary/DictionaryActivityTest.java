@@ -1,5 +1,6 @@
 package com.example.EnglishDictionary;
 
+import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -11,6 +12,7 @@ import androidx.test.espresso.ViewInteraction;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.*;
 import androidx.test.rule.ActivityTestRule;
+import androidx.test.runner.AndroidJUnitRunner;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
@@ -29,7 +31,7 @@ import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
 
-@RunWith(AndroidJUnit4.class)
+//@RunWith(AndroidJUnitRunner.class)
 @LargeTest
 public class DictionaryActivityTest {
 
@@ -39,7 +41,9 @@ public class DictionaryActivityTest {
 
     @Before
     public void launchActivity() {
+
         ActivityScenario.launch(DictionaryActivity.class);
+
     }
 
     @After
