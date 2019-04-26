@@ -68,13 +68,6 @@ before_install:
 #    - $HOME/.gradle/wrapper/
 #    - $HOME/.android/build-cache
 
-system-images;android-24;default;armeabi-v7a
-system-images;android-19;default;armeabi-v7a
-system-images;android-17;default;armeabi-v7a
-system-images;android-22;default;armeabi-v7a
-system-images;android-18;default;armeabi-v7a
-system-images;android-21;default;armeabi-v7a
-
 before_script:
   - echo no | avdmanager create avd --force -n test0 -k "system-images;android-28;default;x86"
   - emulator -avd test0 -memory 1500 -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage &
