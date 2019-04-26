@@ -28,3 +28,12 @@ allprojects {
         }
     }
 }
+
+if (hasProperty('test')) {
+    test {
+        testLogging {
+            events "passed", "skipped", "failed"
+            exceptionFormat "full"
+        }
+    }
+}
