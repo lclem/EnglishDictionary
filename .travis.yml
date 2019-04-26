@@ -38,6 +38,7 @@ android:
     
 before_install:
 #  - yes | sdkmanager "platforms;android-28"
+  - pip install --user codecov    #Install codecov
   - chmod +x gradlew
   - mkdir -p "$ANDROID_HOME/licenses"
   - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
@@ -59,6 +60,7 @@ cache:
 before_script:
   - export GRADLE_USER_HOME=$(pwd)/.gradle
   - export PATH=$PATH:$ANDROID_HOME/emulator/
+  - export CODECOV_TOKEN="888b5841-0ebd-4b7f-b90a-fefa2cac34b2"
   #- echo no | avdmanager create avd --force -n test0 -k "system-images;android-28;default;x86"
   #- $ANDROID_HOME/emulator/emulator -avd test0 -memory 1500 -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage &
   #- echo no | avdmanager create avd -n test1 -k "system-images;android-17;default;armeabi-v7a" -c 200M -f # & # &>/dev/null
@@ -79,6 +81,16 @@ before_script:
   - adb shell settings put global animator_duration_scale 0.0
 
 script:
+#  - ./gradlew build jacocoTestReport assembleAndroidTest
+  - ./gradlew build assembleAndroidTest
   - adb devices
+  - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
   - adb shell input keyevent 82 &
   - echo yes | ./gradlew connectedAndroidTest --scan --info
+  
+after_success:
+  - codecov
+#  - bash <(curl -s https://codecov.io/bash)
+
+after_failure:
+  - cat $TRAVIS_BUILD_DIR/app/build/outputs/lint-results-debug.xml
