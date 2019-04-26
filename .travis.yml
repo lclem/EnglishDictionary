@@ -74,7 +74,7 @@ before_script:
   #- $ANDROID_HOME/emulator/emulator -avd test3 -no-audio -no-window & # &>/dev/null
   #- $ANDROID_HOME/emulator/emulator -avd test4 -no-audio -no-window & # &>/dev/null
   #- $ANDROID_HOME/emulator/emulator -avd test5 -no-audio -no-window & # &>/dev/null
-  - $ANDROID_HOME/emulator/emulator -avd test6 -no-skin -no-audio -no-window -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage & # &>/dev/null
+  - $ANDROID_HOME/emulator/emulator -avd test6 -no-audio -no-window -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage & # &>/dev/null
   - android-wait-for-emulator
   - adb shell settings put global window_animation_scale 0.0
   - adb shell settings put global transition_animation_scale 0.0
@@ -86,6 +86,7 @@ script:
   - adb devices
   - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
   - adb shell input keyevent 82 &
+  - adb shell input tap 650 300
   - echo yes | ./gradlew connectedAndroidTest --scan --info
   
 after_success:
