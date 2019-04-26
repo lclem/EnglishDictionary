@@ -37,7 +37,8 @@ android:
     - sys-img-armeabi-v7a-android-24
     
 before_install:
-#  - yes | sdkmanager "platforms;android-28"
+  - yes | sdkmanager "platforms;android-28"
+  - pip install --upgrade pip
   - pip install --user codecov    #Install codecov
   - chmod +x gradlew
   - chmod +x set_animation_permissions.sh
